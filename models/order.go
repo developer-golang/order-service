@@ -2,6 +2,11 @@ package models
 
 import "time"
 
+const (
+	StatusPending   = "PENDING"
+	StatusCompleted = "COMPLETED"
+)
+
 type OrderDetails struct {
 	OrderId          int       `json:"order_id" gorm:"type:int;not null;column:order_id;primaryKey;autoIncrement"`
 	UserId           int       `json:"user_id" gorm:"type:int;not null;column:user_id"`
